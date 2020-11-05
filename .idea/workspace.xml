@@ -6,10 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pink/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pink/layouts/site.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/MenusRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Repository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +87,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604602807868">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604602807868" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1603132465396">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -105,14 +115,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603133288452" />
-    <state x="448" y="86" key="NewPhpClassDialog" timestamp="1604594643644">
+    <state x="448" y="86" key="NewPhpClassDialog" timestamp="1604602417330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604594643644" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1604595314770">
+    <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604602417330" />
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1604602291052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604595314770" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604602291052" />
     <state x="518" y="65" key="RollbackChangesDialog" timestamp="1603131618142">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
