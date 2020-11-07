@@ -20,3 +20,13 @@ Route::resource('/',
         ]
     ]
 );
+
+Route::resource('portfolios',
+    'PortfolioController',
+    [
+        'parameters' => [
+            'portfolios' => 'alias'
+        ]
+    ]
+);
+

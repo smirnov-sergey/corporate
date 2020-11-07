@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\MenusRepository;
+use App\Repositories\PortfoliosRepository;
 use App\Repositories\SlidersRepository;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,9 @@ use Lavary\Menu\Menu;
 
 class SiteController extends Controller
 {
+    /**
+     * @var PortfoliosRepository
+     */
     protected $p_rep;
     /**
      * @var SlidersRepository
