@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Articles;
 use App\Repositories\MenusRepository;
 use App\Repositories\PortfoliosRepository;
 use App\Repositories\SlidersRepository;
@@ -20,6 +21,9 @@ class SiteController extends Controller
      * @var SlidersRepository
      */
     protected $s_rep;
+    /**
+     * @var Articles
+     */
     protected $a_rep;
     /**
      * @var MenusRepository
@@ -29,7 +33,7 @@ class SiteController extends Controller
     protected $template;
     protected $vars = [];
 
-    protected $contentRightBar = FALSE;
+    protected $content_right_bar = FALSE;
     protected $contentLeftBar = FALSE;
     protected $bar = FALSE;
 
@@ -48,6 +52,14 @@ class SiteController extends Controller
             ->render();
 
         $this->vars = array_add($this->vars, 'navigation', $navigation);
+
+        if ($this->content_right_bar) {
+            $right_bar = view(env('THEME') . '.right_bar')
+                ->with('content_right_bar', $this->content_right_bar)
+                ->render();
+
+            $this->vars = array_add($this->vars, 'right_bar', $right_bar);
+        }
 
         return view($this->template)
             ->with($this->vars);

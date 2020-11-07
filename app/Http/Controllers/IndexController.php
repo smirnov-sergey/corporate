@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Menu;
+use App\Repositories\ArticlesRepository;
 use App\Repositories\MenusRepository;
 use App\Repositories\PortfoliosRepository;
 use App\Repositories\SlidersRepository;
@@ -13,12 +14,13 @@ use Illuminate\Support\Facades\Config;
 
 class IndexController extends SiteController
 {
-    public function __construct(SlidersRepository $s_rep, PortfoliosRepository $p_rep)
+    public function __construct(SlidersRepository $s_rep, PortfoliosRepository $p_rep, ArticlesRepository $a_rep)
     {
         parent:: __construct(new MenusRepository(new Menu()));
 
         $this->s_rep = $s_rep;
         $this->p_rep = $p_rep;
+        $this->a_rep = $a_rep;
 
         $this->bar = 'right';
         $this->template = env('THEME') . '.index';
@@ -47,7 +49,20 @@ class IndexController extends SiteController
 
         $this->vars = array_add($this->vars, 'sliders', $sliders);
 
+        $articles = $this->getArticles();
+
+        $this->content_right_bar = view(env('THEME') . '.index_bar')
+            ->with('articles', $articles)
+            ->render();
+
         return $this->renderOutput();
+    }
+
+    private function getArticles()
+    {
+        $articles = $this->a_rep->get(['title', 'created_at', 'img', 'alias'], Config::get('settings.home_articles_count'));
+
+        return $articles;
     }
 
     private function getSliders()

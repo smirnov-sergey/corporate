@@ -11,3 +11,7 @@
 @section('content')
     {!! $content !!}
 @endsection
+
+@section('bar')
+    {!! $right_bar !!}
+@endsection
