@@ -6,13 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pink/articles.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Articles.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/articles.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,13 @@
     </option>
     <option name="currentCommit" value="1" />
     <option name="onto" value="000a74d94fd5822f98defb36194685996de7465e" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/smirnov-sergey/corporate" />
+      </set>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -149,7 +161,7 @@
       <workItem from="1604673586337" duration="9810000" />
       <workItem from="1604741764938" duration="9252000" />
       <workItem from="1604761413724" duration="5018000" />
-      <workItem from="1604849485464" duration="1371000" />
+      <workItem from="1604849485464" duration="4923000" />
     </task>
     <servers />
   </component>
@@ -173,14 +185,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="36" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1604605844867" />
-    <state x="309" y="41" key="#Inspections" timestamp="1604610300064">
+    <state x="309" y="41" key="#Inspections" timestamp="1604854214738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="309" y="41" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1604610300064" />
+    <state x="309" y="41" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1604854214738" />
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604683357307">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604683357307" />
+    <state x="488" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604851323988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1604851323988" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604764868217">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -233,17 +249,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604849690209" />
-    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1604744627850">
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1604851371610">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604744627850" />
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604851371610" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1604676020013">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604676020013" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604683518981">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604851479726">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604683518981" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604851479726" />
   </component>
 </project>

@@ -39,3 +39,10 @@ Route::resource('articles',
     ]
 );
 
+Route::get('articles/cat/{cat_alias}',
+    [
+        'uses' => 'ArticlesController@index',
+        'as' => 'articles_cat'
+    ]
+);
+
