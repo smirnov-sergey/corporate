@@ -6,20 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pink/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/articles.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pink/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pink/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pink/index_bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/index_bar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pink/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +37,11 @@
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
         <option name="originalMessage" value="'#0005'" />
-        <option name="rewordedMessage" value="#0005 - create content sitebar, show right bar. fix Portfolio add files" />
+        <option name="rewordedMessage" value="#0005 - locale project" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="b6c7bd6463fbe59720990509de5a685ddd862a49" />
+    <option name="onto" value="000a74d94fd5822f98defb36194685996de7465e" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -127,7 +120,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -143,7 +148,8 @@
       <workItem from="1603131468081" duration="2868000" />
       <workItem from="1604673586337" duration="9810000" />
       <workItem from="1604741764938" duration="9252000" />
-      <workItem from="1604761413724" duration="2259000" />
+      <workItem from="1604761413724" duration="5018000" />
+      <workItem from="1604849485464" duration="1371000" />
     </task>
     <servers />
   </component>
@@ -175,22 +181,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604683357307" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604749210708">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604764868217">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604749210708" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604764868217" />
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey" timestamp="1604605851448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey/0.0.1366.728@0.0.1366.728" timestamp="1604605851448" />
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1604750752359">
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1604764582843">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1604750752359" />
-    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog" timestamp="1604750679541">
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1604764582843" />
+    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog" timestamp="1604763808304">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1604750679541" />
+    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1604763808304" />
     <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1603133288452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -215,14 +221,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604749179510" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1604763045392">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1604764972801">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604763045392" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604764972801" />
     <state x="518" y="65" key="RollbackChangesDialog" timestamp="1603131618142">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603131618142" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1604849690209">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604849690209" />
     <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1604744627850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

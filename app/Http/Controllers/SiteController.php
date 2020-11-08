@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Articles;
+use App\Repositories\ArticlesRepository;
 use App\Repositories\MenusRepository;
 use App\Repositories\PortfoliosRepository;
 use App\Repositories\SlidersRepository;
@@ -22,7 +22,7 @@ class SiteController extends Controller
      */
     protected $s_rep;
     /**
-     * @var Articles
+     * @var ArticlesRepository
      */
     protected $a_rep;
     /**

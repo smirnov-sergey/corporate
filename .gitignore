@@ -6,3 +6,4 @@ Homestead.json
 .env
 .idea/php.xml
 .idea/phpunit.xml
+.idea/workspace.xml
