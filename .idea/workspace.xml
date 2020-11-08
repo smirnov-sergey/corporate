@@ -6,10 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CommentsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/articles_bar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/articles.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +158,7 @@
       <workItem from="1604673586337" duration="9810000" />
       <workItem from="1604741764938" duration="9252000" />
       <workItem from="1604761413724" duration="5018000" />
-      <workItem from="1604849485464" duration="7671000" />
+      <workItem from="1604849485464" duration="11407000" />
     </task>
     <servers />
   </component>
@@ -190,10 +194,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1604851323988" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604764868217">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604862183745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604764868217" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604862183745" />
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey" timestamp="1604605851448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -226,14 +230,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1604683373897" />
-    <state x="448" y="86" key="NewPhpClassDialog" timestamp="1604749179510">
+    <state x="448" y="86" key="NewPhpClassDialog" timestamp="1604862165000">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604749179510" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1604764972801">
+    <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604862165000" />
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1604861448132">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604764972801" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604861448132" />
     <state x="518" y="65" key="RollbackChangesDialog" timestamp="1603131618142">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -242,14 +246,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604859449517" />
-    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1604851371610">
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1604861765124">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604851371610" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1604858848373">
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604861765124" />
+    <state x="504" y="134" key="refactoring.ChangeSignatureDialog" timestamp="1604862067402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604858848373" />
+    <state x="504" y="134" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1604862067402" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1604863090923">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604863090923" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604851479726">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

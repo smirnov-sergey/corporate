@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ArticlesRepository;
+use App\Repositories\CommentsRepository;
 use App\Repositories\MenusRepository;
 use App\Repositories\PortfoliosRepository;
 use App\Repositories\SlidersRepository;
@@ -29,6 +30,10 @@ class SiteController extends Controller
      * @var MenusRepository
      */
     protected $m_rep;
+    /**
+     * @var CommentsRepository
+     */
+    protected $c_rep;
 
     protected $keywords;
     protected $meta_desc;

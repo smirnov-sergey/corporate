@@ -1,6 +1,6 @@
 <div id="content-blog" class="content group">
 
-    @if(!$articles)
+    @if($articles)
         @foreach($articles as $article)
             <div class="sticky hentry hentry-post blog-big group">
                 <!-- post featured & title -->
