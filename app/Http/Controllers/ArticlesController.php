@@ -53,7 +53,7 @@ class ArticlesController extends SiteController
         $articles = $this->a_rep->get(['id', 'title', 'alias', 'created_at', 'img', 'desc', 'user_id', 'category_id'], false, true);
 
         if ($articles) {
-//            $articles->load('user', 'category', 'comments');
+            $articles->load('user', 'category', 'comments');
         }
 
         return $articles;
@@ -62,6 +62,10 @@ class ArticlesController extends SiteController
     private function getComments($take)
     {
         $comments = $this->c_rep->get(['text', 'name', 'email', 'site', 'article_id', 'user_id'], $take);
+
+        if ($comments) {
+            $comments->load('article', 'user');
+        }
 
         return $comments;
     }
