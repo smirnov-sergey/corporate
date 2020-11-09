@@ -4,8 +4,22 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * Class User
+ * @package App
+ *
+ * id int
+ * name string
+ * email string
+ * remember_token string
+* created_at timestamp
+ * updated_at timestamp
+ * login string
+ */
 class User extends Authenticatable
 {
+    protected $table = 'users';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -26,6 +40,6 @@ class User extends Authenticatable
 
     public function articles()
     {
-        return $this->hasMany('App\Article');
+        return $this->hasMany(Article::class);
     }
 }
