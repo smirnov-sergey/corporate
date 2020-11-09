@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string filter_alias
  * @property string keywords
  * @property string meta_desc
+ * @property Filter filter
  */
 class Portfolio extends Model
 {

@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string alias
  * @property string created_at
  * @property string updated_at
+ * @property Article articles
  */
 class Category extends Model
 {

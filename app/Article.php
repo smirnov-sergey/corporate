@@ -20,6 +20,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property int category_id
  * @property string keywords
  * @property string meta_desc
+ * @property User user
+ * @property Category category
+ * @property Comment comments
  */
 class Article extends Model
 {

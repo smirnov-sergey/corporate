@@ -15,6 +15,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property string created_at
  * @property string updated_at
  * @property string login
+ * @property Article articles
  */
 class User extends Authenticatable
 {

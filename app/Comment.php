@@ -18,6 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string updated_at
  * @property int article_id
  * @property int user_id
+ * @property Article article
+ * @property User user
  */
 class Comment extends Model
 {
