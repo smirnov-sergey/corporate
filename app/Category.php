@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
  * Class Category
  * @package App
  *
- * id int
- * title string
- * parent_id int
- * alias string
- * created_at timestamp
- * updated_at timestamp
+ * @property int id
+ * @property string title
+ * @property int parent_id
+ * @property string alias
+ * @property string created_at
+ * @property string updated_at
  */
 class Category extends Model
 {

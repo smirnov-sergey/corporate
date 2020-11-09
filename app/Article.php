@@ -8,18 +8,18 @@ use Illuminate\Database\Eloquent\Model;
  * Class Article
  * @package App
  *
- * id int
- * title string
- * text text
- * desc text
- * alias string
- * img string
- * created_at timestamp
- * updated_at timestamp
- * user_id int
- * category_id int
- * keywords string
- * meta_desc string
+ * @property int id
+ * @property string title
+ * @property string text
+ * @property string desc
+ * @property string alias
+ * @property string img
+ * @property string created_at
+ * @property string updated_at
+ * @property int user_id
+ * @property int category_id
+ * @property string keywords
+ * @property string meta_desc
  */
 class Article extends Model
 {

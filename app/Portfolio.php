@@ -8,17 +8,17 @@ use Illuminate\Database\Eloquent\Model;
  * Class Portfolio
  * @package App
  *
- * id int
- * title string
- * text text
- * customer string
- * alias string
- * img string
- * created_at timestamp
- * updated_at timestamp
- * filter_alias string
- * keywords string
- * meta_desc string
+ * @property int id
+ * @property string title
+ * @property string text
+ * @property string customer
+ * @property string alias
+ * @property string img
+ * @property string created_at
+ * @property string updated_at
+ * @property string filter_alias
+ * @property string keywords
+ * @property string meta_desc
  */
 class Portfolio extends Model
 {

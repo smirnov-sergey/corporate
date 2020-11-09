@@ -8,16 +8,16 @@ use Illuminate\Database\Eloquent\Model;
  * Class Comment
  * @package App
  *
- * id int
- * text text
- * name string
- * email string
- * site string
- * parent_id int
- * created_at timestamp
- * updated_at timestamp
- * article_id int
- * user_id int
+ * @property int id
+ * @property string text
+ * @property string name
+ * @property string email
+ * @property string site
+ * @property int parent_id
+ * @property string created_at
+ * @property string updated_at
+ * @property int article_id
+ * @property int user_id
  */
 class Comment extends Model
 {

@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
  * Class Filter
  * @package App
  *
- * id int
- * title string
- * alias string
- * created_at timestamp
- * updated_at timestamp
+ * @property int id
+ * @property string title
+ * @property string alias
+ * @property string created_at
+ * @property string updated_at
  */
 class Filter extends Model
 {

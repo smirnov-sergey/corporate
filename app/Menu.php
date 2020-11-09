@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
  * Class Menu
  * @package App
  *
- * id int
- * title string
- * path string
- * parent int
- * created_at timestamp
- * updated_at timestamp
+ * @property int id
+ * @property string title
+ * @property string path
+ * @property int parent
+ * @property string created_at
+ * @property string updated_at
  */
 class Menu extends Model
 {

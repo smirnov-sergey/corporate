@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
  * Class Slider
  * @package App
  *
- * id int
- * img string
- * desc text
- * title string
- * created_at timestamp
- * updated_at timestamp
+ * @property int id
+ * @property string img
+ * @property string desc
+ * @property string title
+ * @property string created_at
+ * @property string updated_at
  */
 class Slider extends Model
 {
