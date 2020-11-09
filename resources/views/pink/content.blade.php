@@ -1,3 +1,10 @@
+<?php
+/**
+ * @var $portfolios App\Portfolio
+ * @var $portfolio App\Portfolio
+ */
+?>
+
 @if($portfolios && count($portfolios) > 0)
 
     <div id="content-home" class="content group">

@@ -1,3 +1,10 @@
+<?php
+/**
+ * @var $articles App\Article
+ * @var $article App\Article
+ */
+?>
+
 <div id="content-blog" class="content group">
 
     @if($articles)

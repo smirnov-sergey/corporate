@@ -1,3 +1,10 @@
+<?php
+/**
+ * @var $articles App\Article
+ * @var $article App\Article
+ */
+?>
+
 <div class="widget-first widget recent-posts">
 
     @if($articles)

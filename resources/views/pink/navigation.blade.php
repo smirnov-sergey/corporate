@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var $menu App\Menu
+ */
+?>
+
 @if($menu)
     <div class="menu classic">
         <ul id="nav" class="menu">

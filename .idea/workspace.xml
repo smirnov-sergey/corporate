@@ -11,7 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/article_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/article_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/articles_bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/articles_bar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/articles_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/index_bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/index_bar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pink/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/slider.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,18 +265,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604935118578" />
-    <state x="518" y="65" key="RollbackChangesDialog" timestamp="1603131618142">
+    <state x="518" y="65" key="RollbackChangesDialog" timestamp="1604949245118">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603131618142" />
+    <state x="518" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604949245118" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1604859449517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604859449517" />
-    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1604941796953">
+    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1604949930516">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604941796953" />
+    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604949930516" />
     <state x="504" y="134" key="refactoring.ChangeSignatureDialog" timestamp="1604862067402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -278,9 +285,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604863090923" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604941925008">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604949206143">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604941925008" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604949206143" />
   </component>
 </project>

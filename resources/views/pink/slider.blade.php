@@ -1,3 +1,10 @@
+<?php
+/**
+ * @var $sliders App\Slider
+ * @var $slider App\Slider
+ */
+?>
+
 @if(count($sliders) > 0)
     <div id="slider-cycle" class="slider cycle no-responsive slider_cycle group" style="height:485px;">
         <ul class="slider">

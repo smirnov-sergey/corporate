@@ -1,3 +1,12 @@
+<?php
+/**
+ * @var $portfolios App\Portfolio
+ * @var $portfolio App\Portfolio
+ * @var $comments App\Comment
+ * @var $comment App\Comment
+ */
+?>
+
 <div class="widget-first widget recent-posts">
     <h3>{{ Lang::get('ru.latest_projects') }}</h3>
 

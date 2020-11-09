@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var $article App\Article
+ */
+?>
+
 <div id="content-single" class="content group">
     <div class="hentry hentry-post blog-big group ">
         <!-- post featured & title -->
