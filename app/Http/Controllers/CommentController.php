@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
+use App\Comment;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
 
 class CommentController extends Controller
 {
@@ -31,11 +36,41 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+        $data = $request->except('_token', 'comment_post_ID', 'comment_parent');
+
+        $data['article_id'] = $request->input('comment_post_ID');
+        $data['parent_id'] = $request->input('comment_parent');
+
+        $validator = Validator::make($data, [
+            'article_id' => 'integer|required',
+            'parent_id' => 'integer|required',
+            'text' => 'string|required',
+        ]);
+
+        $validator->sometimes(['name', 'email'], 'required|max:255', function ($input) {
+            return !Auth::check();
+        });
+
+        if ($validator->fails()) {
+            return Response::json(['error' => $validator->errors()->all()]);
+        }
+
+        $user = Auth::user();
+
+        $comment = new Comment($data);
+
+        if ($user) {
+            $comment->user_id = $user->id;
+        }
+
+        $post = Article::find($data['article_id']);
+        $post->comments()->save($comment);
+
         echo json_encode(['hello' => 'world']);
 
         exit();
@@ -44,7 +79,7 @@ class CommentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -55,7 +90,7 @@ class CommentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -66,8 +101,8 @@ class CommentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -78,7 +113,7 @@ class CommentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

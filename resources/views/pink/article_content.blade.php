@@ -119,14 +119,20 @@
 
         <!-- END TRACKBACK & PINGBACK -->
         <div id="respond">
-            <h3 id="reply-title">Leave a <span>Reply</span> <small><a rel="nofollow" id="cancel-comment-reply-link"
-                                                                      href="#respond" style="display:none;">Cancel
-                        reply</a></small></h3>
+            <h3 id="reply-title">
+                Leave a
+                <span>Reply</span>
+                <small>
+                    <a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;">
+                        Cancel reply
+                    </a>
+                </small>
+            </h3>
             <form action="{{ route('comment.store', []) }}" method="post" id="commentform">
                 @if(!Auth::check())
                     <p class="comment-form-author">
                         <label for="author">Name</label>
-                        <input id="author" name="author" type="text" value="" size="30" aria-required="true"/>
+                        <input id="name" name="name" type="text" value="" size="30" aria-required="true"/>
                     </p>
                     <p class="comment-form-email">
                         <label for="email">Email</label>
@@ -134,13 +140,13 @@
                     </p>
                     <p class="comment-form-url">
                         <label for="url">Website</label>
-                        <input id="url" name="url" type="text" value="" size="30"/>
+                        <input id="url" name="site" type="text" value="" size="30"/>
                     </p>
                 @endif
 
                 <p class="comment-form-comment">
                     <label for="comment">Your comment</label>
-                    <textarea id="comment" name="comment" rows="8">
+                    <textarea id="comment" name="text" rows="8">
                     </textarea>
                 </p>
                 <div class="clear"></div>
@@ -148,7 +154,7 @@
                     {{ csrf_field() }}
 
                     <input id="comment_post_ID" type="hidden" name="comment_post_ID" value="{{ $article->id }}"/>
-                    <input id="comment_parent" type="hidden" name="comment_parent" value=""/>
+                    <input id="comment_parent" type="hidden" name="comment_parent" value="0"/>
 
                     <input id="submit" name="submit" type="submit" value="Post Comment"/>
                 </p>

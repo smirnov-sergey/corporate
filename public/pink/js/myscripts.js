@@ -14,8 +14,11 @@ jQuery(document).ready(function ($) {
                 let data = $('#commentform').serializeArray();
 
                 $.ajax({
-                    url:  $('#commentform').attr('action'),
+                    url: $('#commentform').attr('action'),
                     data: data,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     type: 'POST',
                     dataType: 'JSON',
                     success: function () {
@@ -26,7 +29,5 @@ jQuery(document).ready(function ($) {
                     }
                 })
             });
-
-
     });
 })
