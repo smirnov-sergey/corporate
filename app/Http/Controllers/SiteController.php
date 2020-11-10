@@ -43,7 +43,7 @@ class SiteController extends Controller
     protected $vars = [];
 
     protected $content_right_bar = FALSE;
-    protected $contentLeftBar = FALSE;
+    protected $content_left_bar = FALSE;
     protected $bar = 'no';
 
 
@@ -68,6 +68,14 @@ class SiteController extends Controller
                 ->render();
 
             $this->vars = array_add($this->vars, 'right_bar', $right_bar);
+        }
+
+        if ($this->content_left_bar) {
+            $left_bar = view(env('THEME') . '.left_bar')
+                ->with('content_left_bar', $this->content_left_bar)
+                ->render();
+
+            $this->vars = array_add($this->vars, 'left_bar', $left_bar);
         }
 
         $this->vars = array_add($this->vars, 'bar', $this->bar);

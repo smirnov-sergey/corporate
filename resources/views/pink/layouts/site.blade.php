@@ -159,16 +159,27 @@
 
         <div class="wrap_result"></div>
 
+    @if(Route::currentRouteName()  == 'portfolios.index')
         <!-- START PAGE META -->
-        @if(Route::currentRouteName()  == 'portfolios.index')
             <div id="page-meta">
                 <div class="inner group">
-                    <h3>Welcome to my portfolio page</h3>
-                    <h4>... i hope you enjoy my works</h4>
+                    <h3>Добро пожаловать на страницу портфолио</h3>
+                        <h4>... надеюсь вам понравятся работы</h4>
                 </div>
             </div>
-        @endif
-        <!-- END PAGE META -->
+            <!-- END PAGE META -->
+    @endif
+
+    @if(Route::currentRouteName()  == 'contacts')
+        <!-- START PAGE META -->
+            <div id="page-meta">
+                <div class="inner group">
+                    <h3>Добро пожаловать на страницу контактов</h3>
+                    <h4>... будем рады знакомству</h4>
+                </div>
+            </div>
+            <!-- END PAGE META -->
+    @endif
 
         <!-- START PRIMARY -->
         <div id="primary" class="sidebar-{{ isset($bar) ? $bar : 'no' }}">
