@@ -53,7 +53,7 @@ class ArticlesController extends SiteController
         return $this->renderOutput();
     }
 
-    public function show($alias = false)
+    public function show($alias)
     {
         $article = $this->a_rep->one($alias, ['comments' => true]);
 

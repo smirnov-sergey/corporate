@@ -29,7 +29,6 @@ class PortfolioController extends SiteController
         $portfolios = $this->getPortfolios();
 
 
-
         $content = view(env('THEME') . '.portfolios_content')
             ->with('portfolios', $portfolios)
             ->render();
@@ -39,9 +38,30 @@ class PortfolioController extends SiteController
         return $this->renderOutput();
     }
 
-    private function getPortfolios()
+    public function show($alias)
     {
-        $portfolios = $this->p_rep->get('*', false, true);
+        $portfolios = $this->getPortfolios(config('settings.other_portfolios'), false);
+        $portfolio = $this->p_rep->one($alias);
+
+        $this->title = $portfolio->title;
+        $this->keywords = $portfolio->keywords;
+        $this->meta_desc = $portfolio->meta_desc;
+
+        $content = view(env('THEME') . '.portfolio_content')
+            ->with([
+                'portfolio' => $portfolio,
+                'portfolios' => $portfolios,
+            ])
+            ->render();
+
+        $this->vars = array_add($this->vars, 'content', $content);
+
+        return $this->renderOutput();
+    }
+
+    private function getPortfolios($take = false, $paginate = true)
+    {
+        $portfolios = $this->p_rep->get('*', $take, $paginate);
 
         if ($portfolios) {
             $portfolios->load('filter');
@@ -49,6 +69,4 @@ class PortfolioController extends SiteController
 
         return $portfolios;
     }
-
-
 }
