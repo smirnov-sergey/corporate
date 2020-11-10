@@ -28,6 +28,10 @@ class ArticlesController extends SiteController
 
     public function index($cat_alias = false)
     {
+        $this->title = 'Блог';
+        $this->keywords = 'string';
+        $this->meta_desc = 'string';
+
         $articles = $this->getArticles($cat_alias);
 
         $content = view(env('THEME') . '.articles_content')
@@ -56,6 +60,10 @@ class ArticlesController extends SiteController
         if ($article) {
             $article->img = json_decode($article->img);
         }
+
+        $this->title = $article->title;
+        $this->keywords = $article->keywords;
+        $this->meta_desc = $article->meta_desc;
 
         $content = view(env('THEME') . '.article_content')
             ->with('article', $article)
@@ -90,7 +98,7 @@ class ArticlesController extends SiteController
         }
 
         $articles = $this->a_rep->get(
-            ['id', 'title', 'alias', 'created_at', 'img', 'desc', 'user_id', 'category_id'],
+            ['id', 'title', 'alias', 'created_at', 'img', 'desc', 'user_id', 'category_id', 'keywords', 'meta_desc'],
             false,
             true,
             $where
