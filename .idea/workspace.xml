@@ -11,16 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_102638_ChangeUsersTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pink/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/emails/password.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,12 +135,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pink/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\localhost\resources\views\pink\admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\localhost\resources\views\pink" />
     </key>
@@ -182,7 +177,7 @@
       <workItem from="1604849485464" duration="11609000" />
       <workItem from="1604920107256" duration="21284000" />
       <workItem from="1605020180779" duration="17390000" />
-      <workItem from="1605086953024" duration="4479000" />
+      <workItem from="1605086953024" duration="15561000" />
     </task>
     <servers />
   </component>
@@ -233,18 +228,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1604851323988" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605036295020">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605098964629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605036295020" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605098964629" />
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey" timestamp="1604605851448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey/0.0.1366.728@0.0.1366.728" timestamp="1604605851448" />
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1604923146179">
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1605109978633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1604923146179" />
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1605109978633" />
     <state x="175" y="46" key="Git.Interactive.Rebase.Dialog" timestamp="1604763808304">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -273,14 +268,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604862165000" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605089860229">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605097570503">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605089860228" />
-    <state x="518" y="65" key="RollbackChangesDialog" timestamp="1605020601245">
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605097570503" />
+    <state x="518" y="65" key="RollbackChangesDialog" timestamp="1605113128681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605020601245" />
+    <state x="518" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605113128681" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1604859449517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -289,22 +284,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1605025237355" />
-    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1605089544617">
+    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1605109719161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605089544617" />
+    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605109719161" />
     <state x="504" y="134" key="refactoring.ChangeSignatureDialog" timestamp="1604862067402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="504" y="134" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1604862067402" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1604863090923">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1605107740303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604863090923" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605036670932">
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605107740303" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605112980410">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605036670932" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605112980410" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
