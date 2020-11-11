@@ -2,7 +2,11 @@
 
 namespace App\Exceptions;
 
+use App\Menu;
+use App\Http\Controllers\SiteController;
+use App\Repositories\MenusRepository;
 use Exception;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -39,12 +43,33 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $e
+     * @param \Illuminate\Http\Request $request
+     * @param \Exception $e
      * @return \Illuminate\Http\Response
      */
     public function render($request, Exception $e)
     {
+        if ($this->isHttpException($e)) {
+            $status_code = $e->getStatusCode();
+
+            switch ($status_code) {
+                case '404':
+                    $obj = new SiteController(new MenusRepository(new Menu()));
+
+                    $navigation = view(env('THEME') . '.navigation')
+                        ->with('menu', $obj->getMenu())
+                        ->render();
+
+                    Log::alert('Страница не найдена - ' . $request->url());
+
+                    return response()->view(env('THEME') . '.404', [
+                        'bar' => 'no',
+                        'title' => 'Страница не найдена',
+                        'navigation' => $navigation,
+                    ]);
+            }
+        }
+
         return parent::render($request, $e);
     }
 }

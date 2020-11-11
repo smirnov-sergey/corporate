@@ -8,7 +8,6 @@ use App\Repositories\MenusRepository;
 use App\Repositories\PortfoliosRepository;
 use App\Repositories\SlidersRepository;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use Lavary\Menu\Menu;
 
@@ -93,7 +92,7 @@ class SiteController extends Controller
             ->with($this->vars);
     }
 
-    protected function getMenu()
+    public function getMenu()
     {
         $menu = $this->m_rep->get();
 
