@@ -49,4 +49,65 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class, 'role_user');
     }
+
+
+    /**
+     * @param $permission 'string' or array('VIEW_ADMIN, 'ADD_ARTICLES')
+     * @param false $require
+     * @return bool|mixed
+     */
+    public function canDo($permission, $require = false)
+    {
+        if (is_array($permission)) {
+            foreach ($permission as $permission_name) {
+                $permission_name = $this->canDo($permission_name);
+
+                if ($permission_name && !$require) {
+                    return true;
+                } elseif (!$permission_name && $require) {
+                    return false;
+                }
+
+                return $require;
+            }
+        } else {
+            foreach ($this->roles as $role) {
+                foreach ($role->permissions as $permission) {
+                    if (str_is($permission, $permission->name)) {
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * @param $name
+     * @param false $require
+     * @return bool|mixed
+     */
+    public function hasRole($name, $require = false)
+    {
+        if (is_array($name)) {
+            foreach ($name as $role_name) {
+                $has_role = $this->hasRole($role_name);
+
+                if ($has_role && !$require) {
+                    return true;
+                } elseif (!$has_role && $require) {
+                    return false;
+                }
+
+                return $require;
+            }
+        } else {
+            foreach ($this->roles as $role) {
+                if ($role->name == $name) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }
