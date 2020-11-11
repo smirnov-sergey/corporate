@@ -11,8 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_181231_CreateRolesTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_181256_CreatePermissionsTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_181556_CreatePermissionRoleTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_181632_CreateRoleUserTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_181933_ChangeRoleUserTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_181957_ChangePermissionRoleTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +49,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitRewordedCommitMessages">
-    <option name="commitMessagesMapping">
-      <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="'#0005'" />
-        <option name="rewordedMessage" value="#0005 - locale project" />
-      </RewordedCommitMessageMapping>
-    </option>
-    <option name="currentCommit" value="1" />
-    <option name="onto" value="000a74d94fd5822f98defb36194685996de7465e" />
+    <option name="onto" value="7da53e79b6362ba194ddfe9f4a6a044951615c78" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -228,10 +229,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1604851323988" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605098964629">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605119567393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605098964629" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605119567393" />
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey" timestamp="1604605851448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -240,10 +241,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1605109978633" />
-    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog" timestamp="1604763808304">
+    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog" timestamp="1605113942207">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1604763808304" />
+    <state x="175" y="46" key="Git.Interactive.Rebase.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1605113942207" />
     <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1603133288452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
