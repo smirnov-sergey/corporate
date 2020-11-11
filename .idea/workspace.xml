@@ -11,10 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pink/404.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_11_102638_ChangeUsersTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/emails/password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +182,7 @@
       <workItem from="1604849485464" duration="11609000" />
       <workItem from="1604920107256" duration="21284000" />
       <workItem from="1605020180779" duration="17390000" />
-      <workItem from="1605086953024" duration="1900000" />
+      <workItem from="1605086953024" duration="4479000" />
     </task>
     <servers />
   </component>
@@ -267,10 +273,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604862165000" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605087278735">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605089860229">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605087278735" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605089860228" />
     <state x="518" y="65" key="RollbackChangesDialog" timestamp="1605020601245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -283,10 +289,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1605025237355" />
-    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1605039221337">
+    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1605089544617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605039221337" />
+    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605089544617" />
     <state x="504" y="134" key="refactoring.ChangeSignatureDialog" timestamp="1604862067402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

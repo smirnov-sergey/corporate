@@ -59,3 +59,9 @@ Route::match(['get', 'post'],
     ['uses' => 'ContactsController@index', 'as' => 'contacts']
 );
 
+Route::get('login', 'Auth\AuthController@showLoginForm');
+
+Route::post('login', 'Auth\AuthController@login');
+
+Route::get('logout', 'Auth\AuthController@logout');
+
