@@ -168,11 +168,17 @@ class ArticlesController extends AdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
-     * @return \Illuminate\Http\Response
+     * @param Article $article
+     * @return \Illuminate\Http\RedirectResponse|void
      */
-    public function destroy($id)
+    public function destroy(Article $article)
     {
-        //
+        $result = $this->a_rep->deleteArticle($article);
+
+        if (is_array($result) && !empty($result['error'])) {
+            return back()->with($result);
+        }
+
+        return redirect('/admin')->with($result);
     }
 }
