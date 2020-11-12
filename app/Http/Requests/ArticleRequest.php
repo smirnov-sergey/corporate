@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Article;
 use App\Http\Requests\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -42,6 +43,12 @@ class ArticleRequest extends Request
         $validator = parent::getValidatorInstance();
 
         $validator->sometimes('alias', 'unique:articles|max:255', function ($input) {
+            if ($this->route()->hasParameter('articles')) {
+                $model = $this->route()->parameter('articles');
+
+                return ($model->alias !== $input->alias) && !empty($input->alias);
+            }
+
             return !empty($input->alias);
         });
 
