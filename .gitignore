@@ -8,3 +8,5 @@ Homestead.json
 .idea/phpunit.xml
 .idea/workspace.xml
 *.xml
+*.xml
+*.iml
