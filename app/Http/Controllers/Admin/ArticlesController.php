@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Article;
+use App\Category;
 use App\Repositories\ArticlesRepository;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -16,7 +18,6 @@ class ArticlesController extends AdminController
 
         if (!Gate::denies('VIEW_ADMIN_ARTICLES')) {
             abort(403);
-
         }
 
         $this->a_rep = $a_rep;
@@ -50,11 +51,33 @@ class ArticlesController extends AdminController
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Http\Response|\Illuminate\View\View
+     * @throws \Throwable
      */
     public function create()
     {
-        //
+        if (Gate::allows('save', new Article())) {
+            abort(403);
+        }
+
+        $this->title = 'Добавить новый материал';
+
+        $lists = [];
+        $categories = Category::select(['title', 'alias', 'parent_id', 'id'])->get();
+
+        foreach ($categories as $category) {
+            if ($category->parent_id === 0) {
+                $lists[$category->title] = [];
+            } else {
+                $lists[$categories->where('id', $category->parent_id)->first()->title][$category->id] = $category->title;
+            }
+        }
+
+        $this->content = view(env('THEME') . '.admin.articles_create_content')
+            ->with('categories', $lists)
+            ->render();
+
+        return $this->renderOutput();
     }
 
     /**
