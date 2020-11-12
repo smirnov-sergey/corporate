@@ -142,7 +142,7 @@
                     <span class="sublabel">Изображение материала:</span>
                 </label>
                 <div class="input-prepend">
-                    {!! Form::file('image', ['class' => 'filestyle', 'data-buttonText' => 'Выберите изображение', 'data-buttonName' => 'button']) !!}
+                    {!! Form::file('image', ['class' => 'filestyle', 'data-buttonText' => 'Выберите изображение', 'data-buttonName' => 'image']) !!}
                 </div>
             </li>
             <li class="text-field">

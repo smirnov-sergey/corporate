@@ -28,6 +28,10 @@ class Article extends Model
 {
     protected $table = 'articles';
 
+    protected $fillable = [
+        'title', 'img', 'alias', 'text', 'desc', 'keywords', 'meta_desc', 'category_id'
+    ];
+
 
     public function user()
     {

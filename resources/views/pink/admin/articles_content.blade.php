@@ -52,7 +52,11 @@
                 </table>
             </div>
 
-            {!! Html::link(route('admin.articles.create')) !!}
+            {!! Html::link(
+                route('admin.articles.create'),
+                'Добавить материал',
+                ['class' => 'btn btn-french-1']
+            ) !!}
         </div>
     </div>
 @endif
