@@ -6,6 +6,7 @@
  */
 ?>
 
+
 <div id="content-page" class="content group">
     <div class="henrty group">
 
