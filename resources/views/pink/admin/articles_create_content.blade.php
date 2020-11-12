@@ -165,7 +165,7 @@
             @endif
 
             <li class="submit-button">
-                {!! Form::button('Сохранить', ['class' => 'btn btn-the-salmon-dance-1']) !!}
+                {!! Form::submit('Сохранить', ['class' => 'btn btn-the-salmon-dance-1']) !!}
             </li>
         </ul>
 
