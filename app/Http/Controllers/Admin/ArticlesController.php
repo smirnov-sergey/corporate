@@ -112,12 +112,39 @@ class ArticlesController extends AdminController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
-     * @return \Illuminate\Http\Response
+     * @param Article $article
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\View\View|void
+     * @throws \Throwable
      */
-    public function edit($id)
+    public function edit(Article $article)
     {
-        //
+        if (Gate::allows('edit', new Article())) {
+            abort(403);
+        }
+
+        $article->img = json_decode($article->img);
+
+        $lists = [];
+        $categories = Category::select(['title', 'alias', 'parent_id', 'id'])->get();
+
+        foreach ($categories as $category) {
+            if ($category->parent_id === 0) {
+                $lists[$category->title] = [];
+            } else {
+                $lists[$categories->where('id', $category->parent_id)->first()->title][$category->id] = $category->title;
+            }
+        }
+
+        $this->title = 'Редактирование материала - ' . $article->title;
+
+        $this->content = view(env('THEME') . '.admin.articles_create_content')
+            ->with([
+                'categories' => $lists,
+                'article' => $article
+            ])
+            ->render();
+
+        return $this->renderOutput();
     }
 
     /**
