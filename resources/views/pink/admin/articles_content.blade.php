@@ -28,10 +28,10 @@
                         <tr>
                             <td class="align-left">{{ $article->id }}</td>
                             <td class="align-left">{!! Html::link(route('admin.articles.edit', ['articles' => $article->alias])) !!}</td>
-                            <td class="align-left">{{ str_limit($article->text, 200) }}</td>
+                            <td class="align-left">{!! str_limit($article->text, 200) !!}</td>
                             <td>
                                 @if(isset($article->img->mini))
-                                    {!! Html::image(asset(env('THEME'))) . '/image/articles/' . $article->img->mini !!}
+                                    {!! Html::image(asset(env('THEME')) . '/images/articles/' . $article->img->mini) !!}
                                 @endif
                             </td>
                             <td>{{ $article->category->title }}</td>

@@ -15,6 +15,8 @@ class ArticleRequest extends Request
     public function authorize()
     {
         return true;
+
+        // @TODO разобраться с ошибкой Forbidden
         return Auth::user()->canDo('ADD_ARTICLES');
     }
 

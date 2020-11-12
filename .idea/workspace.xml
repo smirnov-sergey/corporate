@@ -11,18 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/localhost.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/localhost.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pink/admin/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/admin/articles_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pink/admin/articles_create_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/admin/articles_create_content.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,10 +244,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey/0.0.1366.728@0.0.1366.728" timestamp="1604605851448" />
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1605109978633">
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1605200783060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1605109978633" />
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1605200783060" />
     <state x="175" y="46" key="Git.Interactive.Rebase.Dialog" timestamp="1605185960258">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
