@@ -39,6 +39,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset(env('THEME')) }}/css/reset.css">
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset(env('THEME')) }}/css/style-minifield.css">
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset(env('THEME')) }}/css/thickbox.css">
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset(env('THEME')) }}/css/jquery-ui.css">
 
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset(env('THEME')) }}/css/reset.css"/>
     <!-- RESET STYLESHEET -->
@@ -71,6 +72,7 @@
 
     <!-- JAVASCRIPTs -->
     <script type="text/javascript" src="{{ asset(env('THEME')) }}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{ asset(env('THEME')) }}/js/jquery-ui.js"></script>
     <script type="text/javascript" src="{{ asset(env('THEME')) }}/js/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="{{ asset(env('THEME')) }}/js/bootstrap-filestyle.min.js"></script>
 </head>

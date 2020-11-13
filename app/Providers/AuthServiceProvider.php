@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Article;
 use App\Permission;
 use App\Policies\ArticlePolicy;
+use App\Policies\MenusPolicy;
 use App\Policies\PermissionPolicy;
 use App\User;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
@@ -20,6 +21,7 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         Article::class => ArticlePolicy::class,
         Permission::class => PermissionPolicy::class,
+        Menu::class => MenusPolicy::class,
     ];
 
     /**
@@ -46,6 +48,10 @@ class AuthServiceProvider extends ServiceProvider
 
         $gate->define('VIEW_ADMIN_MENU', function (User $user) {
             return $user->canDo('VIEW_ADMIN_MENU', false);
+        });
+
+        $gate->define('EDIT_MENU', function (User $user) {
+            return $user->canDo('EDIT_MENU', false);
         });
     }
 }

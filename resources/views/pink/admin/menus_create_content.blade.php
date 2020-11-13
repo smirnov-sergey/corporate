@@ -162,7 +162,6 @@
                 </li>
             </ul>
         </div>
-
         <br/>
 
         @if(isset($menu_id))
@@ -178,3 +177,17 @@
         {!! Form::close() !!}
     </div>
 </div>
+
+<script>
+    jQuery(function ($) {
+        $('#accordion').accordion({
+            activate: function (e, obj) {
+                obj.newPanel.prev()
+                    .find('input[type=radio]')
+                    .attr('checked', 'checked');
+            }
+        });
+
+        $('input[type=radio]').css('-webkit-appearance', 'auto');
+    })
+</script>

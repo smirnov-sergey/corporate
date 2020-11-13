@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Filter;
+use App\Http\Requests\MenusRequest;
 use App\Repositories\ArticlesRepository;
 use App\Repositories\MenusRepository;
 use App\Repositories\PortfoliosRepository;
@@ -124,9 +125,16 @@ class MenusController extends AdminController
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MenusRequest $request)
     {
-        //
+        $result = $this->m_rep->addMenu($request);
+
+        if (is_array($request) && !empty($result['error'])) {
+            return back()->with($result);
+        }
+
+        return redirect('/admin')->with($result);
+
     }
 
     /**
