@@ -11,13 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Policies/PermissionPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/admin/custom_menu_items.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/admin/menus.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/admin/menus_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PermissionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/PermissionsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PermissionsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pink/admin/permissions_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pink/admin/permissions_content.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,7 @@
       <workItem from="1605202746497" duration="3130000" />
       <workItem from="1605207107346" duration="118000" />
       <workItem from="1605207280013" duration="1437000" />
-      <workItem from="1605269458794" duration="4944000" />
+      <workItem from="1605269458794" duration="9581000" />
     </task>
     <servers />
   </component>
@@ -284,10 +285,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1605270147784" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605270717962">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605276415969">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605270717962" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605276415969" />
     <state x="518" y="65" key="RollbackChangesDialog" timestamp="1605209392522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -304,10 +305,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="341" y="0" width="1000" height="703" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1605122237168" />
-    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1605272831700">
+    <state x="390" y="97" width="850" height="559" key="find.popup" timestamp="1605276615184">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605272831700" />
+    <state x="390" y="97" width="850" height="559" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605276615184" />
     <state x="504" y="134" key="refactoring.ChangeSignatureDialog" timestamp="1604862067402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -316,10 +317,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605107740303" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605209171253">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605278575086">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605209171253" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605278575086" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
