@@ -29,4 +29,34 @@ class Role extends Model
     {
         return $this->belongsToMany(Permission::class, 'permission_role');
     }
+
+    /**
+     * @param $name
+     * @param false $require
+     * @return bool|mixed
+     */
+    public function hasPermission($name, $require = false)
+    {
+        if (is_array($name)) {
+            foreach ($name as $permission_name) {
+                $has_permission = $this->hasPermissions($permission_name);
+
+                if ($has_permission && !$require) {
+                    return true;
+                } elseif (!$has_permission && $require) {
+                    return false;
+                }
+
+                return $require;
+            }
+        } else {
+            foreach ($this->permissions as $permission) {
+                if ($permission->name == $name) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }
