@@ -57,7 +57,12 @@
 
         <div id="accordion">
             <h3>
-                {!! Form::radio('type', 'customLink', (isset($type) && $type == 0) ? '' : '2') !!}
+                {!! Form::radio(
+                    'type',
+                    'customLink',
+                    (isset($type) && $type == 'customLink') ? true : false,
+                    ['class' => 'radioMenu']
+                ) !!}
                 <span class="label">Пользовательская ссылка</span>
             </h3>
 
@@ -84,7 +89,12 @@
             </ul>
 
             <h3>
-                {!! Form::radio('type', 'blogLink', (isset($type) && $type == 0) ? '' : '2') !!}
+                {!! Form::radio(
+                    'type',
+                    'blogLink',
+                    (isset($type) && $type == 'blockLink') ? true : false,
+                    ['class' => 'radioMenu']
+                ) !!}
                 <span class="label">Раздел блог:</span>
             </h3>
 
@@ -100,7 +110,7 @@
                             {!! Form::select(
                                'category_alias',
                                $categories,
-                               isset($option) ? $option : null
+                               (isset($option) && $option) ? $option : false
                             ) !!}
                         @endif
                     </div>
@@ -117,7 +127,8 @@
                             {!! Form::select(
                                'article_alias',
                                $articles,
-                               isset($option) ? $option : null
+                               isset($option) ? $option : false,
+                               ['placeholder' => 'Не используется']
                             ) !!}
                         @endif
                     </div>
@@ -125,7 +136,12 @@
             </ul>
 
             <h3>
-                {!! Form::radio('type', 'portfolioLink', (isset($type) && $type == 0) ? '' : '2') !!}
+                {!! Form::radio(
+                    'type',
+                    'portfolioLink',
+                    (isset($type) && $type == 'portfolioLink') ? true : false,
+                    ['class' => 'radioMenu']
+                ) !!}
                 <span class="label">Раздел портфолио:</span>
             </h3>
 
@@ -187,6 +203,16 @@
                     .attr('checked', 'checked');
             }
         });
+
+        let active = 0;
+
+        $('#accordion input[type=radio]').each(function (index, it) {
+            if ($(this).prop('checked')) {
+                active = index;
+            }
+        });
+
+        $('#accordion').accordion('option', 'active', active);
 
         $('input[type=radio]').css('-webkit-appearance', 'auto');
     })

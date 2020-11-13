@@ -123,7 +123,7 @@ class MenusController extends AdminController
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
      */
     public function store(MenusRequest $request)
     {
@@ -151,12 +151,93 @@ class MenusController extends AdminController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
-     * @return \Illuminate\Http\Response
+     * @param \App\Menu $menu
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\View\View|void
+     * @throws \Throwable
      */
-    public function edit($id)
+    public function edit(\App\Menu $menu)
     {
-        //
+        $this->title = 'Редактирование ссылки - ' . $menu->title;
+
+        $type = false;
+        $option = false;
+
+        $route = app('router')->getRoutes()->match(app('request')->create($menu->path));
+        $alias_route = $route->getName();
+        $parameters = $route->parameters();
+
+        if ($alias_route === 'articles.index' || $alias_route === 'articles_cat') {
+            $type = 'blockLink';
+            $option = isset($parameters['cat_alias']) ? $parameters['cat_alias'] : 'parent';
+        } elseif ($alias_route === 'articles.show') {
+            $type = 'blockLink';
+            $option = isset($parameters['alias']) ? $parameters['alias'] : '';
+        } elseif ($alias_route === 'portfolios.index') {
+            $type = 'portfolioLink';
+            $option = 'parent';
+        } elseif ($alias_route === 'portfolios.show') {
+            $type = 'portfolioLink';
+            $option = isset($parameters['cat_alias']) ? $parameters['cat_alias'] : '';
+        } else {
+            $type = 'customLink';
+        }
+
+        $tmp_menus = $this->getMenus()->roots();
+        // уменьшить коллекцию на 1 элемент при каждом вызове функции
+        $menus = $tmp_menus->reduce(function ($return_menus, $menu) {
+            $return_menus[$menu->id] = $menu->title;
+
+            return $return_menus;
+        }, ['0' => 'Родительский пункт меню']);
+
+        $tmp_articles = $this->a_rep->get(['id', 'title', 'alias']);
+        $articles = $tmp_articles->reduce(function ($return_articles, $article) {
+            $return_articles[$article->alias] = $article->title;
+
+            return $return_articles;
+        }, []);
+
+        $tmp_filters = Filter::select(['id', 'title', 'alias'])->get();
+        $filters = $tmp_filters->reduce(function ($return_filters, $filter) {
+            $return_filters[$filter->alias] = $filter->title;
+
+            return $return_filters;
+        }, ['parent' => 'Раздел портфолио']);
+
+        $tmp_portfolios = $this->p_rep->get(['id', 'alias', 'title']);
+        $portfolios = $tmp_portfolios->reduce(function ($return_portfolios, $portfolio) {
+            $return_portfolios[$portfolio->alias] = $portfolio->title;
+
+            return $return_portfolios;
+        }, []);
+
+        $list = [];
+        $list = array_add($list, '0', 'Не используется');
+        $list = array_add($list, 'parent', 'Раздел блог');
+        $categories = Category::select(['title', 'alias', 'parent_id', 'id'])->get();
+
+        foreach ($categories as $category) {
+            if ($category->parent_id === 0) {
+                $list[$category->title] = [];
+            } else {
+                $list[$categories->where('id', $category->parent_id)->first()->title][$category->alias] = $category->title;
+            }
+        }
+
+        $this->content = view(env('THEME') . '.admin.menus_create_content')
+            ->with([
+                'type' => $type,
+                'option' => $option,
+                'menu' => $menu,
+                'menus' => $menus,
+                'articles' => $articles,
+                'filters' => $filters,
+                'portfolios' => $portfolios,
+                'categories' => $list,
+            ])
+            ->render();
+
+        return $this->renderOutput();
     }
 
     /**
