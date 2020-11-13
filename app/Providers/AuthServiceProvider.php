@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Article;
+use App\Permission;
 use App\Policies\ArticlePolicy;
+use App\Policies\PermissionPolicy;
 use App\User;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -16,7 +18,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        Article::class => ArticlePolicy::class
+        Article::class => ArticlePolicy::class,
+        Permission::class => PermissionPolicy::class,
     ];
 
     /**
