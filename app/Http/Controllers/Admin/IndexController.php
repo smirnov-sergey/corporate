@@ -13,7 +13,7 @@ class IndexController extends AdminController
     {
         parent::__construct();
 
-        if (Gate::allows('VIEW_ADMIN')) {
+        if (Gate::denies('VIEW_ADMIN')) {
             abort(403);
         }
 

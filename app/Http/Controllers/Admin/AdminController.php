@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Lavary\Menu\Menu;
 
 class AdminController extends Controller
@@ -68,7 +69,10 @@ class AdminController extends Controller
     public function getMenu()
     {
         $menu = (new Menu)->make('admin_menu', function ($menu) {
-            $menu->add('Статьи', ['route' => 'admin.articles.index']);
+            if (Gate::allows('VIEW_ADMIN_ARTICLES')) {
+                $menu->add('Статьи', ['route' => 'admin.articles.index']);
+            }
+
             $menu->add('Портфолио', ['route' => 'admin.articles.index']);
             $menu->add('Меню', ['route' => 'admin.menus.index']);
             $menu->add('Пользователи', ['route' => 'admin.users.index']);

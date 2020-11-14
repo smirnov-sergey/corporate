@@ -27,7 +27,7 @@ class UsersController extends AdminController
     {
         parent::__construct();
 
-        if (Gate::allows('EDIT_USERS')) {
+        if (Gate::denies('EDIT_USERS')) {
             abort(403);
         }
 

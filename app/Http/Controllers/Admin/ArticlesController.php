@@ -17,7 +17,7 @@ class ArticlesController extends AdminController
     {
         parent::__construct();
 
-        if (!Gate::denies('VIEW_ADMIN_ARTICLES')) {
+        if (Gate::denies('VIEW_ADMIN_ARTICLES')) {
             abort(403);
         }
 
@@ -57,7 +57,7 @@ class ArticlesController extends AdminController
      */
     public function create()
     {
-        if (Gate::allows('save', new Article())) {
+        if (Gate::denies('save', new Article())) {
             abort(403);
         }
 
@@ -118,7 +118,7 @@ class ArticlesController extends AdminController
      */
     public function edit(Article $article)
     {
-        if (Gate::allows('edit', new Article())) {
+        if (Gate::denies('edit', new Article())) {
             abort(403);
         }
 

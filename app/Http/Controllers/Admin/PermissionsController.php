@@ -25,11 +25,11 @@ class PermissionsController extends AdminController
     {
         parent::__construct();
 
-        if (Gate::allows('EDIT_USERS')) {
+        if (Gate::denies('EDIT_USERS')) {
             abort(403);
         }
 
-        if (!Gate::denies('VIEW_ADMIN_ARTICLES')) {
+        if (Gate::denies('VIEW_ADMIN_ARTICLES')) {
             abort(403);
         }
 
