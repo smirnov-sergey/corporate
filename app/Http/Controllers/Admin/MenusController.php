@@ -26,7 +26,7 @@ class MenusController extends AdminController
     {
         parent::__construct();
 
-        if (Gate::denies('VIEW_ADMIN_MENU')) {
+        if (!Gate::denies('VIEW_ADMIN_MENU')) {
             abort(403);
         }
 
