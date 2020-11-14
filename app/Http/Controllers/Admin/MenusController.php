@@ -129,7 +129,7 @@ class MenusController extends AdminController
     {
         $result = $this->m_rep->addMenu($request);
 
-        if (is_array($request) && !empty($result['error'])) {
+        if (is_array($result) && !empty($result['error'])) {
             return back()->with($result);
         }
 
@@ -244,23 +244,36 @@ class MenusController extends AdminController
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
+     * @param \App\Menu $menu
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, \App\Menu $menu)
     {
-        //
+        $result = $this->m_rep->updateMenu($request, $menu);
+
+        if (is_array($result) && !empty($result['error'])) {
+            return back()->with($result);
+        }
+
+        return redirect('/admin')->with($result);
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
-     * @return \Illuminate\Http\Response
+     * @param \App\Menu $menu
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy($id)
+    public function destroy(\App\Menu $menu)
     {
-        //
+        $result = $this->m_rep->deleteMenu($menu);
+
+        if (is_array($result) && !empty($result['error'])) {
+            return back()->with($result);
+        }
+
+        return redirect('/admin')->with($result);
     }
 
     private function getMenus()
