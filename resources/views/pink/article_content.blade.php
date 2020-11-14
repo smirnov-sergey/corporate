@@ -17,7 +17,7 @@
                 </h1>
                 <!-- post featured -->
                 <div class="image-wrap">
-                    <img src="{{ asset(env('THEME')) }}/images/articles/{{ $article->img->max }}"
+                    <img src="{{ asset(config('settings.theme')) }}/images/articles/{{ $article->img->max }}"
                          alt="00212"
                          title="00212"
                     />
@@ -113,7 +113,7 @@
                         @break
                     @endif
 
-                    @include(env('THEME') . '.comment', ['items' => $comments])
+                    @include(config('settings.theme') . '.comment', ['items' => $comments])
                 @endforeach
             </ol>
     @endif

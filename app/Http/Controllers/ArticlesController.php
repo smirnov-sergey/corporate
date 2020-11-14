@@ -23,7 +23,7 @@ class ArticlesController extends SiteController
         $this->c_rep = $c_rep;
 
         $this->bar = 'right';
-        $this->template = env('THEME') . '.articles';
+        $this->template = config('settings.theme') . '.articles';
     }
 
     public function index($cat_alias = false)
@@ -34,7 +34,7 @@ class ArticlesController extends SiteController
 
         $articles = $this->getArticles($cat_alias);
 
-        $content = view(env('THEME') . '.articles_content')
+        $content = view(config('settings.theme') . '.articles_content')
             ->with('articles', $articles)
             ->render();
 
@@ -43,7 +43,7 @@ class ArticlesController extends SiteController
         $comments = $this->getComments(config('settings.recent_comments'));
         $portfolios = $this->getPortfolios(config('settings.recent_portfolios'));
 
-        $this->content_right_bar = view(env('THEME') . '.articles_bar')
+        $this->content_right_bar = view(config('settings.theme') . '.articles_bar')
             ->with([
                 'comments' => $comments,
                 'portfolios' => $portfolios
@@ -67,7 +67,7 @@ class ArticlesController extends SiteController
             $this->meta_desc = $article->meta_desc;
         }
 
-        $content = view(env('THEME') . '.article_content')
+        $content = view(config('settings.theme') . '.article_content')
             ->with('article', $article)
             ->render();
 
@@ -76,7 +76,7 @@ class ArticlesController extends SiteController
         $comments = $this->getComments(config('settings.recent_comments'));
         $portfolios = $this->getPortfolios(config('settings.recent_portfolios'));
 
-        $this->content_right_bar = view(env('THEME') . '.articles_bar')
+        $this->content_right_bar = view(config('settings.theme') . '.articles_bar')
             ->with([
                 'comments' => $comments,
                 'portfolios' => $portfolios

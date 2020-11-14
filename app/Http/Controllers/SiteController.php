@@ -55,14 +55,14 @@ class SiteController extends Controller
     {
         $menu = $this->getMenu();
 
-        $navigation = view(env('THEME') . '.navigation')
+        $navigation = view(config('settings.theme') . '.navigation')
             ->with('menu', $menu)
             ->render();
 
         $this->vars = array_add($this->vars, 'navigation', $navigation);
 
         if ($this->content_right_bar) {
-            $right_bar = view(env('THEME') . '.right_bar')
+            $right_bar = view(config('settings.theme') . '.right_bar')
                 ->with('content_right_bar', $this->content_right_bar)
                 ->render();
 
@@ -70,7 +70,7 @@ class SiteController extends Controller
         }
 
         if ($this->content_left_bar) {
-            $left_bar = view(env('THEME') . '.left_bar')
+            $left_bar = view(config('settings.theme') . '.left_bar')
                 ->with('content_left_bar', $this->content_left_bar)
                 ->render();
 
@@ -83,7 +83,7 @@ class SiteController extends Controller
         $this->vars = array_add($this->vars, 'meta_desc', $this->meta_desc);
         $this->vars = array_add($this->vars, 'title', $this->title);
 
-        $footer = view(env('THEME') . '.footer')
+        $footer = view(config('settings.theme') . '.footer')
             ->render();
 
         $this->vars = array_add($this->vars, 'footer', $footer);

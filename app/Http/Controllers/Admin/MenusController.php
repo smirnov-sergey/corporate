@@ -34,7 +34,7 @@ class MenusController extends AdminController
         $this->a_rep = $a_rep;
         $this->p_rep = $p_rep;
 
-        $this->template = env('THEME') . '.admin.menus';
+        $this->template = config('settings.theme') . '.admin.menus';
     }
 
     /**
@@ -47,7 +47,7 @@ class MenusController extends AdminController
     {
         $menu = $this->getMenus();
 
-        $this->content = view(env('THEME') . '.admin.menus_content')
+        $this->content = view(config('settings.theme') . '.admin.menus_content')
             ->with('menu', $menu)
             ->render();
 
@@ -106,7 +106,7 @@ class MenusController extends AdminController
             }
         }
 
-        $this->content = view(env('THEME') . '.admin.menus_create_content')
+        $this->content = view(config('settings.theme') . '.admin.menus_create_content')
             ->with([
                 'menus' => $menus,
                 'articles' => $articles,
@@ -224,7 +224,7 @@ class MenusController extends AdminController
             }
         }
 
-        $this->content = view(env('THEME') . '.admin.menus_create_content')
+        $this->content = view(config('settings.theme') . '.admin.menus_create_content')
             ->with([
                 'type' => $type,
                 'option' => $option,

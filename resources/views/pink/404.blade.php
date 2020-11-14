@@ -1,4 +1,4 @@
-@extends(env('THEME') . '.layouts.site')
+@extends(config('settings.theme') . '.layouts.site')
 
 @section('navigation')
     {!! $navigation !!}
@@ -7,7 +7,7 @@
 @section('content')
     <div id="content-index" class="content group">
         <img class="error-404-image group"
-             src="{{ asset(env('THEME')) }}/images/features/404.png"
+             src="{{ asset(config('settings.theme')) }}/images/features/404.png"
              title="Error 404"
              alt="404"
         />
@@ -18,6 +18,6 @@
 @endsection
 
 @section('footer')
-    @include(env('THEME') . '.footer')
+    @include(config('settings.theme') . '.footer')
 @endsection
 

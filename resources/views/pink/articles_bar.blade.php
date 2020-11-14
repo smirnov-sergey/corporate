@@ -15,7 +15,7 @@
             @foreach($portfolios as $portfolio)
                 <div class="hentry-post group">
                     <div class="thumb-img">
-                        <img src="{{ asset(env('THEME')) }}/images/projects/{{ $portfolio->img->mini }}"
+                        <img src="{{ asset(config('settings.theme')) }}/images/projects/{{ $portfolio->img->mini }}"
                              style="width: 55px"
                              alt="001"
                              title="001"

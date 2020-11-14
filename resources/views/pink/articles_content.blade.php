@@ -20,7 +20,7 @@
                     </h2>
                     <!-- post featured -->
                     <div class="image-wrap">
-                        <img src="{{ asset(env('THEME')) }}/images/articles/{{ $article->img->max }}"
+                        <img src="{{ asset(config('settings.theme')) }}/images/articles/{{ $article->img->max }}"
                              alt="001"
                              title="001"
                         />

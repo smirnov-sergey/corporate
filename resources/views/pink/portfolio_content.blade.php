@@ -19,7 +19,7 @@
                     <div class="portfolios hentry work group">
                         <div class="work-thumbnail">
                             <a class="thumb">
-                                <img src="{{ asset(env('THEME')) }}/images/projects/{{ $portfolio->img->max }}"
+                                <img src="{{ asset(config('settings.theme')) }}/images/projects/{{ $portfolio->img->max }}"
                                      alt="{{ $portfolio->title }}"
                                      title="{{ $portfolio->title }}"
                                 />
@@ -62,7 +62,7 @@
                                        href="{{ route('portfolios.show', ['alias' => $portfolio->alias]) }}"
                                        title="{{ $portfolio->title }}"
                                     >
-                                        <img src="{{ asset(env('THEME')) }}/images/projects/{{ $portfolio->img->mini }}"
+                                        <img src="{{ asset(config('settings.theme')) }}/images/projects/{{ $portfolio->img->mini }}"
                                              alt="{{ $portfolio->title }}"
                                              title="{{ $portfolio->title }}"
                                         />

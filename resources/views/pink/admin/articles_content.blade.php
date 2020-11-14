@@ -31,7 +31,7 @@
                             <td class="align-left">{!! str_limit($article->text, 200) !!}</td>
                             <td>
                                 @if(isset($article->img->mini))
-                                    {!! Html::image(asset(env('THEME')) . '/images/articles/' . $article->img->mini) !!}
+                                    {!! Html::image(asset(config('settings.theme')) . '/images/articles/' . $article->img->mini) !!}
                                 @endif
                             </td>
                             <td>{{ $article->category->title }}</td>

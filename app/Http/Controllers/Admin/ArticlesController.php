@@ -22,7 +22,7 @@ class ArticlesController extends AdminController
         }
 
         $this->a_rep = $a_rep;
-        $this->template = env('THEME') . '.admin.articles';
+        $this->template = config('settings.theme') . '.admin.articles';
     }
 
     /**
@@ -37,7 +37,7 @@ class ArticlesController extends AdminController
 
         $articles = $this->getArticles();
 
-        $this->content = view(env('THEME') . '.admin.articles_content')
+        $this->content = view(config('settings.theme') . '.admin.articles_content')
             ->with('articles', $articles)
             ->render();
 
@@ -74,7 +74,7 @@ class ArticlesController extends AdminController
             }
         }
 
-        $this->content = view(env('THEME') . '.admin.articles_create_content')
+        $this->content = view(config('settings.theme') . '.admin.articles_create_content')
             ->with('categories', $lists)
             ->render();
 
@@ -137,7 +137,7 @@ class ArticlesController extends AdminController
 
         $this->title = 'Редактирование материала - ' . $article->title;
 
-        $this->content = view(env('THEME') . '.admin.articles_create_content')
+        $this->content = view(config('settings.theme') . '.admin.articles_create_content')
             ->with([
                 'categories' => $lists,
                 'article' => $article

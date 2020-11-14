@@ -23,7 +23,7 @@ class IndexController extends SiteController
         $this->a_rep = $a_rep;
 
         $this->bar = 'right';
-        $this->template = env('THEME') . '.index';
+        $this->template = config('settings.theme') . '.index';
     }
 
     /**
@@ -35,7 +35,7 @@ class IndexController extends SiteController
     {
         $portfolios = $this->getPortfolio();
 
-        $content = view(env('THEME') . '.content')
+        $content = view(config('settings.theme') . '.content')
             ->with('portfolios', $portfolios)
             ->render();
 
@@ -43,7 +43,7 @@ class IndexController extends SiteController
 
         $slider_items = $this->getSliders();
 
-        $sliders = view(env('THEME') . '.slider')
+        $sliders = view(config('settings.theme') . '.slider')
             ->with('sliders', $slider_items)
             ->render();
 
@@ -55,7 +55,7 @@ class IndexController extends SiteController
 
         $articles = $this->getArticles();
 
-        $this->content_right_bar = view(env('THEME') . '.index_bar')
+        $this->content_right_bar = view(config('settings.theme') . '.index_bar')
             ->with('articles', $articles)
             ->render();
 

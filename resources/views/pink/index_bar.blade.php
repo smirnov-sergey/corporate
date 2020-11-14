@@ -13,7 +13,7 @@
             @foreach($articles as $k => $article)
                 <div class="hentry-post group">
                     <div class="thumb-img">
-                        <img src="{{ asset(env('THEME')) }}/images/articles/{{ $article->img->mini }}"
+                        <img src="{{ asset(config('settings.theme')) }}/images/articles/{{ $article->img->mini }}"
                              alt="001"
                              title="001"
                         />
@@ -34,7 +34,7 @@
 <div class="widget-last widget text-image">
     <h3>Customer support</h3>
     <div class="text-image" style="text-align:left">
-        <img src="{{ asset(env('THEME')) }}/images/callus.gif" alt="Customer support"/>
+        <img src="{{ asset(config('settings.theme')) }}/images/callus.gif" alt="Customer support"/>
     </div>
     <p>
         Proin porttitor dolor eu nibh lacinia at ultrices lorem venenatis. Sed volutpat scelerisque

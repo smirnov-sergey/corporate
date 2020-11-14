@@ -46,7 +46,7 @@ class AdminController extends Controller
 
         $menu = $this->getMenu();
 
-        $navigation = view(env('THEME') . '.admin.navigation')
+        $navigation = view(config('settings.theme') . '.admin.navigation')
             ->with('menu', $menu)
             ->render();
 
@@ -56,7 +56,7 @@ class AdminController extends Controller
             $this->vars = array_add($this->vars, 'content', $this->content);
         }
 
-        $footer = view(env('THEME') . '.admin.footer')
+        $footer = view(config('settings.theme') . '.admin.footer')
             ->render();
 
         $this->vars = array_add($this->vars, 'footer', $footer);

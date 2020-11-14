@@ -17,7 +17,7 @@
                 </thead>
 
                 @if($menu)
-                    @include(env('THEME') . '.admin.custom_menu_items', [
+                    @include(config('settings.theme') . '.admin.custom_menu_items', [
                         'items' => $menu->roots(),
                         'padding_left' => ''
                     ])
