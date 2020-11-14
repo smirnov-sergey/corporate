@@ -9,6 +9,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class UsersController extends AdminController
 {
@@ -63,7 +64,7 @@ class UsersController extends AdminController
     {
         $this->title = 'Новый пользователь';
 
-        $tmp_roles = $this->getRoles()->roots();
+        $tmp_roles = $this->getRoles();
         $roles = $tmp_roles->reduce(function ($return_roles, $role) {
             $return_roles[$role->id] = $role->name;
 
