@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Article;
 use App\Menu;
+use App\User;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -37,12 +38,16 @@ class RouteServiceProvider extends ServiceProvider
         $router->bind('menus', function ($value) {
             return Menu::where('id', $value)->first();
         });
+
+        $router->bind('users', function ($value) {
+            return User::find($value);
+        });
     }
 
     /**
      * Define the routes for the application.
      *
-     * @param  \Illuminate\Routing\Router  $router
+     * @param \Illuminate\Routing\Router $router
      * @return void
      */
     public function map(Router $router)
@@ -57,7 +62,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * These routes all receive session state, CSRF protection, etc.
      *
-     * @param  \Illuminate\Routing\Router  $router
+     * @param \Illuminate\Routing\Router $router
      * @return void
      */
     protected function mapWebRoutes(Router $router)

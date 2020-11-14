@@ -73,4 +73,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('/permissions', 'Admin\PermissionsController');
 
     Route::resource('/menus', 'Admin\MenusController');
+
+    Route::resource('/users', 'Admin\UsersController');
 });

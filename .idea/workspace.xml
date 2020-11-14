@@ -11,9 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bbaf38-232e-470f-8062-e018f6422fcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/UsersRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/admin/users.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/admin/users_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pink/admin/users_create_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/MenusRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/MenusRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +199,7 @@
       <workItem from="1605207280013" duration="1437000" />
       <workItem from="1605269458794" duration="25343000" />
       <workItem from="1605344041074" duration="606000" />
+      <workItem from="1605345772736" duration="3924000" />
     </task>
     <servers />
   </component>
@@ -241,18 +250,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1604851323988" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605273442864">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605348138145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605273442864" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605348138145" />
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey" timestamp="1604605851448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="460" y="275" width="446" height="269" key="ComposerInitDialogKey/0.0.1366.728@0.0.1366.728" timestamp="1604605851448" />
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1605279921682">
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1605345516751">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1605279921682" />
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1605345516751" />
     <state x="804" y="118" key="FileChooserDialogImpl" timestamp="1605288676394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -281,14 +290,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1604683373897" />
-    <state x="448" y="86" key="NewPhpClassDialog" timestamp="1605270147784">
+    <state x="448" y="86" key="NewPhpClassDialog" timestamp="1605346073414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1605270147784" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605282986440">
+    <state x="448" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1605346073414" />
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605347776440">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605282986440" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605347776440" />
     <state x="518" y="65" key="RollbackChangesDialog" timestamp="1605209392522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -329,6 +338,11 @@
           <url>file://$PROJECT_DIR$/public/pink/js/save_comment.js</url>
           <line>42</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/pink/admin/users_content.blade.php</url>
+          <line>37</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
